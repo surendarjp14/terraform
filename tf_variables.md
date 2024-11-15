@@ -1,3 +1,5 @@
+**#tf-main_configuration file**
+
 resource "aws_security_group" "sample_sg" {
   name = "Sample_sg"
   description = "For checking Variable function"
@@ -11,13 +13,12 @@ resource "aws_vpc_security_group_ingress_rule" "allow_traf" {
   to_port = var.ap_port
 }
 
-
-#variable file
+**#variable file**
 
 variable "vpn_ip"{}
 variable "ap_port"{}
 
-#*.tfvars file
+**#*.tfvars file**
 
 vpn_ip="100.30.20.45/32"
 ap_port="8080"
