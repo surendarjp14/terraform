@@ -20,3 +20,4 @@ variable "ap_port"{}
 #*.tfvars file
 
 vpn_ip="100.30.20.45/32"
+ap_port="8080"
