@@ -15,3 +15,15 @@ variable "my-list" {
 variable "my-list" {
   type = list(number) -----will store only mentioned datatype in list
 }
+
+variable "user_name" {
+  type = number---- will allow only numbers to be stored in this variable
+}
+
+resource aws_iam_user "username"{
+  name = var.user_name
+}
+
+variable "my-list" {
+  type = list(number)
+}
