@@ -10,10 +10,12 @@ resource "aws_instance" "tester_ec2" {
 
 variable "my-list" {
   type = list  ----- will store any value mentioned
+  ["Hello","2153613","Testing"]
 }
 
 variable "my-list" {
   type = list(number) -----will store only mentioned datatype in list
+  ["3231","3311"]
 }
 
 variable "user_name" {
@@ -24,6 +26,4 @@ resource aws_iam_user "username"{
   name = var.user_name
 }
 
-variable "my-list" {
-  type = list(number)
-}
+''
