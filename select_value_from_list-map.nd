@@ -1,0 +1,18 @@
+## ------ Selecting specific value from a List/ Map 
+
+variable instc_tags{
+  type = map
+  default = {ap-north-1="t2.small",ap-south-1="t2.nano",us-east-2="t2.large"}
+}
+
+variable "inc_list"{
+type = list
+default = ["m5.small","m5.large","m5.xlarge"]
+}
+output "Map_value" {
+  value = var.instc_tags["us-east-2"]
+}
+
+output "List-Instance"{
+value = var.inc_list[1]
+}
